@@ -1,0 +1,124 @@
+/* En: frontend/src/Auth.css */
+
+/* Contenedor centrado para las tarjetas de auth */
+.auth-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start; /* Alineado arriba pero con margen */
+  padding-top: 50px;
+  min-height: 80vh;
+}
+
+/* La tarjeta blanca */
+.auth-card {
+  background-color: var(--white);
+  padding: 40px;
+  border-radius: 12px;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.05); /* Sombra suave y moderna */
+  width: 100%;
+  max-width: 400px;
+  text-align: center;
+  border-top: 5px solid var(--primary-blue); /* Detalle de color corporativo */
+}
+
+.auth-title {
+  color: var(--primary-blue);
+  font-size: 1.8rem;
+  margin-bottom: 10px;
+  font-weight: 700;
+}
+
+.auth-subtitle {
+  color: #666;
+  margin-bottom: 30px;
+  font-size: 0.95rem;
+}
+
+/* Estilos de los Inputs */
+.form-group {
+  margin-bottom: 20px;
+  text-align: left;
+}
+
+.form-label {
+  display: block;
+  margin-bottom: 8px;
+  color: var(--dark-text);
+  font-weight: 600;
+  font-size: 0.9rem;
+}
+
+.form-input, .form-select {
+  width: 100%;
+  padding: 12px 15px;
+  border: 1px solid #ddd; /* Borde sutil */
+  border-radius: 6px;
+  font-size: 1rem;
+  transition: all 0.3s ease;
+  box-sizing: border-box; /* Para que el padding no rompa el ancho */
+}
+
+.form-input:focus, .form-select:focus {
+  border-color: var(--primary-green); /* Foco verde */
+  outline: none;
+  box-shadow: 0 0 0 3px rgba(45, 122, 99, 0.1); /* Resplandor verde suave */
+}
+
+/* Botón Principal */
+.auth-button {
+  width: 100%;
+  padding: 14px;
+  background-color: var(--primary-blue);
+  color: white;
+  border: none;
+  border-radius: 6px;
+  font-size: 1rem;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background-color 0.3s;
+  margin-top: 10px;
+}
+
+.auth-button:hover {
+  background-color: rgb(6, 50, 80); /* Un azul un poco más oscuro */
+}
+
+.auth-button:disabled {
+  background-color: #ccc;
+  cursor: not-allowed;
+}
+
+/* Enlaces y Textos de pie */
+.auth-footer {
+  margin-top: 25px;
+  font-size: 0.9rem;
+  color: #666;
+}
+
+.auth-link {
+  color: var(--primary-green);
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.auth-link:hover {
+  text-decoration: underline;
+}
+
+/* Mensajes de Error/Éxito */
+.message-box {
+  padding: 10px;
+  border-radius: 6px;
+  margin-bottom: 20px;
+  font-size: 0.9rem;
+}
+.message-error {
+  background-color: #fdecea;
+  color: var(--error-color);
+  border: 1px solid #fadbd8;
+}
+.message-success {
+  background-color: #d4edda;
+  color: var(--success-color);
+  border: 1px solid #c3e6cb;
+}

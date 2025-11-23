@@ -1,0 +1,133 @@
+/* En: frontend/src/components/common/AsistenteVirtual.css */
+
+/* Animación de entrada suave */
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(10px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+/* El botón flotante */
+.chatbot-button {
+  position: fixed;
+  bottom: 30px;
+  right: 30px;
+  background-color: var(--primary-blue); /* Color corporativo */
+  color: var(--white);
+  border: none;
+  border-radius: 50%;
+  width: 60px;
+  height: 60px;
+  font-size: 30px;
+  box-shadow: 0 4px 15px rgba(8, 66, 102, 0.4); /* Sombra con tu azul */
+  cursor: pointer;
+  z-index: 9998;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.chatbot-button:hover {
+  transform: scale(1.1);
+  box-shadow: 0 6px 20px rgba(8, 66, 102, 0.6);
+}
+
+/* La ventana del chat */
+.chatbot-window {
+  position: fixed;
+  bottom: 100px;
+  right: 30px;
+  width: 350px;
+  height: 500px;
+  background-color: var(--white);
+  border-radius: 15px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+  display: flex;
+  flex-direction: column;
+  z-index: 9999;
+  overflow: hidden;
+  border: 1px solid #e1e4e8;
+  animation: fadeIn 0.3s ease-out; /* Animación al abrir */
+}
+
+/* Encabezado del chat */
+.chatbot-header {
+  background-color: var(--primary-blue); /* Color corporativo */
+  color: var(--white);
+  padding: 15px 20px;
+  font-weight: bold;
+  font-size: 1.1rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.chatbot-header button {
+  background: none;
+  border: none;
+  color: var(--white);
+  font-size: 24px;
+  font-weight: bold;
+  cursor: pointer;
+  opacity: 0.8;
+  transition: opacity 0.2s;
+}
+
+.chatbot-header button:hover {
+  opacity: 1;
+}
+
+/* Cuerpo del chat (mensajes) */
+.chatbot-body {
+  flex-grow: 1;
+  padding: 20px;
+  overflow-y: auto;
+  background-color: var(--light-bg); /* Fondo suave corporativo */
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+/* Burbuja de mensaje del Bot */
+.bot-message {
+  background-color: var(--white);
+  color: var(--dark-text);
+  padding: 12px 16px;
+  border-radius: 15px 15px 15px 2px; /* Forma de burbuja */
+  max-width: 85%;
+  align-self: flex-start;
+  line-height: 1.5;
+  font-size: 0.95rem;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+  border: 1px solid #eee;
+}
+
+/* Contenedor de opciones */
+.chatbot-options {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  margin-top: 5px;
+  align-items: flex-end; /* Botones a la derecha como respuestas del usuario */
+}
+
+/* Botón de opción */
+.chatbot-option-button {
+  background-color: transparent;
+  color: var(--primary-blue);
+  border: 1px solid var(--primary-blue);
+  padding: 8px 16px;
+  border-radius: 20px;
+  cursor: pointer;
+  text-align: center;
+  font-weight: 600;
+  font-size: 0.9rem;
+  transition: all 0.2s;
+  max-width: 90%;
+}
+
+.chatbot-option-button:hover {
+  background-color: var(--primary-blue);
+  color: var(--white);
+}

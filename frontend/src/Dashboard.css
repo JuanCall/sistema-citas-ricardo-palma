@@ -1,0 +1,151 @@
+/* En: frontend/src/Dashboard.css */
+
+/* --- 1. El Contenedor del Panel (La tarjeta blanca) --- */
+.panel-container {
+  background-color: var(--white);
+  border-radius: 12px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+  padding: 30px;
+  margin-bottom: 30px;
+  border: 1px solid #e1e4e8; /* Borde sutil en lugar de colores fuertes */
+}
+
+.panel-title {
+  color: var(--primary-blue);
+  font-size: 1.5rem;
+  margin-bottom: 10px;
+  font-weight: 700;
+  border-bottom: 2px solid #f0f4f8;
+  padding-bottom: 15px;
+}
+
+.panel-subtitle {
+  color: #666;
+  margin-bottom: 20px;
+}
+
+/* --- 2. Tablas de Datos (Elegantes) --- */
+.data-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 20px;
+  font-size: 0.95rem;
+}
+
+.data-table thead {
+  background-color: var(--primary-blue);
+  color: white;
+}
+
+.data-table th,
+.data-table td {
+  padding: 12px 15px;
+  text-align: left;
+  border-bottom: 1px solid #eee;
+}
+
+.data-table th {
+  font-weight: 600;
+  text-transform: uppercase;
+  font-size: 0.85rem;
+  letter-spacing: 0.5px;
+}
+
+.data-table tbody tr:hover {
+  background-color: #f9fbfd; /* Efecto hover suave */
+}
+
+/* --- 3. Botones (Variantes) --- */
+.btn {
+  padding: 10px 20px;
+  border: none;
+  border-radius: 6px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.2s;
+  font-size: 0.9rem;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+}
+
+/* Botón Primario (Azul - Acciones principales) */
+.btn-primary {
+  background-color: var(--primary-blue);
+  color: white;
+}
+.btn-primary:hover {
+  background-color: rgb(6, 50, 80);
+  transform: translateY(-1px);
+}
+.btn-primary:disabled {
+  background-color: #ccc;
+  transform: none;
+}
+
+/* Botón Secundario (Verde - Agregar/Confirmar) */
+.btn-success {
+  background-color: var(--success-color);
+  color: white;
+}
+.btn-success:hover {
+  background-color: #218838;
+}
+
+/* Botón de Peligro (Rojo - Eliminar/Cancelar) */
+.btn-danger {
+  background-color: var(--error-color);
+  color: white;
+}
+.btn-danger:hover {
+  background-color: #c82333;
+}
+
+/* Botón Pequeño (Para tablas) */
+.btn-sm {
+  padding: 6px 12px;
+  font-size: 0.8rem;
+  margin-right: 5px;
+}
+
+/* Botón de Borde (Para cancelar formularios) */
+.btn-outline {
+  background-color: transparent;
+  border: 1px solid #ccc;
+  color: #666;
+}
+.btn-outline:hover {
+  background-color: #f8f9fa;
+  color: #333;
+  border-color: #bbb;
+}
+
+/* --- 4. Badges (Etiquetas de Estado) --- */
+.status-badge {
+  padding: 4px 10px;
+  border-radius: 20px;
+  font-size: 0.75rem;
+  font-weight: bold;
+  text-transform: uppercase;
+}
+
+.status-reservada { background-color: #fff3cd; color: #856404; } /* Amarillo */
+.status-completada { background-color: #d4edda; color: #155724; } /* Verde */
+.status-cancelada { background-color: #f8d7da; color: #721c24; } /* Rojo */
+.status-activo { background-color: #d1ecf1; color: #0c5460; } /* Azul claro */
+.status-inactivo { background-color: #e2e3e5; color: #383d41; } /* Gris */
+
+/* --- 5. Layouts de Formularios --- */
+.form-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 15px;
+  margin-bottom: 20px;
+}
+
+.form-actions {
+  display: flex;
+  gap: 10px;
+  margin-top: 15px;
+}

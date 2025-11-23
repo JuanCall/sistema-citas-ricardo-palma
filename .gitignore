@@ -1,0 +1,24 @@
+# Dependencias (son muy pesadas, no se suben)
+node_modules/
+*/node_modules/
+
+# Archivos de Construcción
+build/
+dist/
+
+# Variables de Entorno (¡SECRETOS!)
+.env
+.env.local
+.env.development.local
+.env.test.local
+.env.production.local
+
+# Logs y archivos del sistema
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+.DS_Store
+Thumbs.db
+
+# Firebase
+serviceAccountKey.json
